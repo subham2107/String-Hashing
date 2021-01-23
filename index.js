@@ -42,27 +42,27 @@ function logic(userResponse)
 {
    if(userResponse!==1 && userResponse!==2 && userResponse!==3 && userResponse!==4)
    {
-   console.log('Invalid URL');
+       console.log('Invalid URL');
    }
    else
    {
-   const url = readLineSync.question('Please enter the url to be encoded\n');  
+       const url = readLineSync.question('Please enter the url to be encoded\n');  
 
-   if(userResponse===1)
-   {
-   console.log(md5(url));
+       if(userResponse===1)
+       {
+           console.log(md5(url));
+       }
+       else if(userResponse===2)
+       {
+           console.log(sha1(url));
+       }
+       else if(userResponse===3)
+       {
+           console.log(sha256(url));
+       }
+       else if(userResponse===4)
+       {
+           console.log(sha512(url));
+       }
    }
-   else if(userResponse===2)
-   {
-   console.log(sha1(url));
-   }
-   else if(userResponse===3)
-   {
-   console.log(sha256(url));
-   }
-   else if(userResponse===4)
-   {
-   console.log(sha512(url));
-   }
-   }
-   }
+}
